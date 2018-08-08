@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas扫雷</title>
+    <style>
+        #cv {
+            display: block;
+            margin: 50px auto;
+            -webkit-box-shadow: 0 0 20px #000;
+            -moz-box-shadow: 0 0 20px #000;
+            box-shadow: 0 0 20px #000;
+        }
+        .header {
+            text-align: center;
+        }
+        .header>div {
+            display: inline-block;
+            font-size: 30px;
+            vertical-align: middle;
+        }
+        .btn {
+            margin: 0px 50px;
+        }
+        .btn img {
+            width: 100px;
+        }
+        .btn img:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <!-- 目前用时，第一次点开一个块时触发 -->
+    <div class="time">用时: 00:00:00</div>
+    <!-- 笑脸，点一次重新开始一次游戏 -->
+    <div class="btn">
+        <img src="images/o.png" alt="">
+    </div>
+    <!-- 用时最短的记录，本地存储 -->
+    <div class="fastestTime">最快记录：00:00:00</div>
+</div>
+<canvas id="cv"></canvas>
+<script src="index.js"></script>
+</body>
+</html>
